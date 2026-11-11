@@ -1,0 +1,8 @@
+Ground-truth services present in scan: 5
+
+Method                   P@5   P@10  1st hit      AP
+Baseline (CVSS only)     0.8    0.5        1   0.853
+AttackPath               0.6    0.5        1    0.73
+
+Baseline (CVSS only) top 10 ports: [3000, 3306, 5432, 6379, 8081, 8082, 27017]
+AttackPath top 10 ports: [3306, 5432, 8081, 8082, 3000, 6379, 27017]
