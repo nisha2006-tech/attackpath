@@ -1,0 +1,4 @@
+{
+  "description": "Easily exploitable services on Metasploitable 2 (default credentials, backdoors, no authentication, known RCE)",
+  "ports": [21, 23, 139, 445, 512, 513, 514, 1524, 3306, 5432, 5900, 6667, 8180]
+}
