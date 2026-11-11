@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>AttackPath Report</title>
+<style>
+  body { font-family: Arial, sans-serif; margin: 2rem auto; max-width: 960px; color: #222; background: #fafafa; }
+  h1 { margin-bottom: 0.2rem; }
+  .meta { color: #666; margin-bottom: 1.5rem; }
+  .card { background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 1rem; }
+  .head { display: flex; justify-content: space-between; align-items: center; }
+  .score { font-weight: bold; padding: 0.2rem 0.7rem; border-radius: 12px; color: #fff; }
+  .high { background: #c0392b; } .medium { background: #e67e22; } .low { background: #27ae60; }
+  .path { font-family: monospace; margin: 0.6rem 0; word-break: break-all; }
+  .why { color: #555; font-size: 0.9rem; }
+  footer { color: #888; font-size: 0.8rem; margin-top: 2rem; }
+</style>
+</head>
+<body>
+  <h1>AttackPath Report</h1>
+  <div class="meta">Source: {{ source }} &middot; Generated: {{ generated }} &middot; Hosts: {{ host_count }} &middot; Paths shown: {{ paths|length }}</div>
+
+  {% for r in paths %}
+  <div class="card">
+    <div class="head">
+      <strong>#{{ loop.index }}</strong>
+      <span class="score {{ r.level }}">score {{ r.score }}</span>
+    </div>
+    <div class="path">{{ r.path|join(" &rarr; ") }}</div>
+    <div>Likelihood: {{ r.likelihood }} &middot; Impact: {{ r.impact }}/10</div>
+    <div class="why">Why: {{ r.reasons|join("; ") }}</div>
+  </div>
+  {% endfor %}
+
+  <footer>For authorized security testing only. Scores are heuristic estimates, not guarantees.</footer>
+</body>
+</html>

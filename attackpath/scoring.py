@@ -31,3 +31,10 @@ def score_node(data):
 
     return {"likelihood": round(likelihood, 2), "impact": impact,
             "score": round(likelihood * impact, 2), "reasons": reasons}
+
+# Names Nmap reports that the table above did not cover
+SERVICE_RISK.update({
+    "bindshell": (1.0, 10),
+    "java-rmi": (0.7, 8),
+    "rpcbind": (0.4, 5),
+})
