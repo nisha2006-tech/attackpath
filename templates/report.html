@@ -26,7 +26,7 @@
       <strong>#{{ loop.index }}</strong>
       <span class="score {{ r.level }}">score {{ r.score }}</span>
     </div>
-    <div class="path">{{ r.path|join(" &rarr; ") }}</div>
+    <div class="path">{{ r.path|join(" → ") }}</div>
     <div>Likelihood: {{ r.likelihood }} &middot; Impact: {{ r.impact }}/10</div>
     <div class="why">Why: {{ r.reasons|join("; ") }}</div>
   </div>
