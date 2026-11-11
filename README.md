@@ -37,3 +37,14 @@ python -m attackpath samples/sample_scan.xml --top 10 --out report.html --json r
 ## Status
 
 Work in progress (final-year project).
+
+## Preliminary evaluation
+
+Tested on one Metasploitable 2 scan (23 open services). Ground truth: 13 services known to be easily exploitable.
+
+| Method | P@5 | P@10 | AP |
+|---|---|---|---|
+| CVSS-only baseline | 0.6 | 0.5 | 0.641 |
+| AttackPath | 1.0 | 0.8 | 0.908 |
+
+**Limitations:** scoring rules were written with this lab in mind, the ground truth comes from the same lab, and the baseline is simple. These numbers validate the pipeline and are not a general claim. Next: evaluate on unseen targets and add stronger baselines.
