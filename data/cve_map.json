@@ -1,0 +1,6 @@
+{
+  "vsftpd 2.3.4": ["CVE-2011-2523"],
+  "unrealircd": ["CVE-2010-2075"],
+  "samba smbd 3.0": ["CVE-2007-2447"],
+  "distccd": ["CVE-2004-2687"]
+}

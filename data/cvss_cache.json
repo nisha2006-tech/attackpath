@@ -1,0 +1,18 @@
+{
+  "CVE-2004-2687": {
+    "cvss": 9.3,
+    "summary": "distcc 2.x, as used in XCode 1.5 and others, when not configured to restrict access to the server port, allows remote attackers to execute arbitrary commands via compilation jobs, which are executed b"
+  },
+  "CVE-2007-2447": {
+    "cvss": 6.0,
+    "summary": "The MS-RPC functionality in smbd in Samba 3.0.0 through 3.0.25rc3 allows remote attackers to execute arbitrary commands via shell metacharacters involving the (1) SamrChangePassword function, when the"
+  },
+  "CVE-2010-2075": {
+    "cvss": 7.5,
+    "summary": "UnrealIRCd 3.2.8.1, as distributed on certain mirror sites from November 2009 through June 2010, contains an externally introduced modification (Trojan Horse) in the DEBUG3_DOLOG_SYSTEM macro, which a"
+  },
+  "CVE-2011-2523": {
+    "cvss": 9.8,
+    "summary": "vsftpd 2.3.4 downloaded between 20110630 and 20110703 contains a backdoor which opens a shell on port 6200/tcp."
+  }
+}
