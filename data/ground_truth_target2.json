@@ -1,0 +1,4 @@
+{
+  "description": "Docker lab. Easily exploitable: DVWA, Juice Shop, unauthenticated Redis and MongoDB, MySQL with weak root password. Safe: nginx, PostgreSQL with strong password. Written before running AttackPath.",
+  "ports": [8081, 3000, 6379, 27017, 3306]
+}
