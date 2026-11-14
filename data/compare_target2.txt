@@ -1,0 +1,8 @@
+Scan: samples/target2_scan.xml
+Ground-truth services in scan: 5 of 7
+
+Method                   P@5   P@10   1st      AP
+Random                  0.71   0.50     -   0.792
+CVSS only               0.80   0.50     1   0.853
+CVSS + service type     0.80   0.50     1   0.786
+AttackPath              0.80   0.50     1   0.903
