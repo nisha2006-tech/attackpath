@@ -59,3 +59,9 @@ def score_node(data):
 
     return {"likelihood": round(likelihood, 2), "impact": impact,
             "score": round(likelihood * impact, 2), "reasons": reasons}
+
+# v2 rules, written after looking at Target 2 only
+SERVICE_RISK.update({
+    "redis": (0.8, 8),
+    "mongodb": (0.8, 8),
+})
