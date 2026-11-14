@@ -1,0 +1,22 @@
+Held-out  Method           P@5      AP
+target1   ML              0.40   0.523
+target1   AttackPath      1.00   0.908
+target2   ML              0.80   0.810
+target2   AttackPath      0.80   0.903
+target3   ML              0.60   0.639
+target3   AttackPath      0.40   0.411
+
+Mean over the 3 held-out targets
+ML             P@5=0.60  AP=0.657
+AttackPath     P@5=0.73  AP=0.741
+
+Learned weights (trained on all data, for interpretation only)
+  grp_data_store           0.58
+  grp_remote_access        0.58
+  has_cve                  0.54
+  max_cvss                 0.47
+  grp_web                 -0.45
+  has_version             -0.23
+  grp_database             0.12
+  port_low                -0.09
+  grp_file_share           0.06
