@@ -34,7 +34,7 @@ The tool is run as a Python module:
 (Insert the screenshot docs/report.png here.)
 
 ## 5.5 Testing
-Automated tests written with pytest check that the parser finds the host and its services, that the graph contains the attacker and host nodes, and that the ranking is sorted with the most exposed service first. (If you added tests/test_scoring.py, add one sentence about the scoring tests.) The complete pipeline was also run by hand on all three targets. The tests do not yet cover the CVSS download script.
+Automated tests written with pytest check that the parser finds the host and its services, that the graph contains the attacker and host nodes, and that the ranking is sorted with the most exposed service first. Two further tests check that a known service scores above an unknown one and that every score carries reasons and a likelihood between 0 and 1. In total five tests pass. The complete pipeline was also run by hand on all three targets. The tests do not yet cover the CVSS download script.
 
 ## 5.6 Problems faced and how they were solved
 **Unrecognized services.** Nmap reported the Juice Shop web application on port 3000 as an unknown service, so no rule matched it and it received the default score. This is one of the reasons the hand-written rules do not generalize.
