@@ -1,4 +1,5 @@
 import argparse
+import xml.etree.ElementTree as ET
 from attackpath.ingest import parse_nmap_xml
 from attackpath.graph import build_graph
 from attackpath.ranker import rank_paths
@@ -15,7 +16,12 @@ def main():
     parser.add_argument("--json", dest="json_out", help="also write results to this JSON file")
     args = parser.parse_args()
 
-    hosts = parse_nmap_xml(args.scan)
+    try:
+        hosts = parse_nmap_xml(args.scan)
+    except FileNotFoundError:
+        raise SystemExit(f"Scan file not found: {args.scan}")
+    except ET.ParseError:
+        raise SystemExit(f"Not a valid Nmap XML file: {args.scan}")
     if not hosts:
         raise SystemExit("No live hosts found in the scan file.")
 

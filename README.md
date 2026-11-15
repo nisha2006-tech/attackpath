@@ -20,7 +20,8 @@ AI-assisted attack path prioritization for red teams. It reads an Nmap scan, bui
 
 ## Usage
 
-    python -m attackpath samples/sample_scan.xml --top 10 --out report.html --json results.json
+    pip install -e .
+    attackpath samples/sample_scan.xml --top 10 --out report.html --json results.json
 
 ## Evaluation
 
