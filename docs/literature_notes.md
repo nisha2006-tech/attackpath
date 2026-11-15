@@ -1,5 +1,20 @@
-# Literature notes (title, year, venue, one line: what it does, how it differs from AttackPath)
+# Literature notes
+(Copy title, authors, year, venue from the Scholar page. Do not type them from memory.)
 
-1.
-2.
-3.
+## Paper 1
+- Citation:
+- What it does (1 line):
+- Difference from AttackPath (1 line):
+
+## Paper 2
+- Citation:
+- What it does (1 line):
+- Difference from AttackPath (1 line):
+
+## Paper 3
+- Citation:
+- What it does (1 line):
+- Difference from AttackPath (1 line):
+
+## Also read the official pages for
+- CVSS (FIRST), EPSS (FIRST), NVD (NIST), BloodHound documentation
